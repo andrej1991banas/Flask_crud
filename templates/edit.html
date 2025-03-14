@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block title %}Edit Item{% endblock %}
+{% block content %}
+    <h1>Edit Item</h1>
+    <form method="POST" action="{{ url_for('edit_item', id=item.id) }}">
+        <div>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" value="{{ item.name }}" required>
+        </div>
+        <div>
+            <label for="description">Description:</label>
+            <textarea id="description" name="description">{{ item.description or '' }}</textarea>
+        </div>
+        <button type="submit">Update Item</button>
+    </form>
+    <a href="{{ url_for('index') }}" style="display: block; text-align: center; margin-top: 20px; color: #3498db;">Back to List</a>
+{% endblock %}

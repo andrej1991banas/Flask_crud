@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block title %}Delete Item{% endblock %}
+{% block content %}
+    <h1>Delete Item</h1>
+    <p>Are you sure you want to delete "{{ item.name }}"?</p>
+    <form method="POST" action="{{ url_for('delete_item', id=item.id) }}">
+        <button type="submit">Yes, Delete</button>
+        <a href="{{ url_for('index') }}" style="margin-left: 10px; color: #3498db;">No, Cancel</a>
+    </form>
+{% endblock %}

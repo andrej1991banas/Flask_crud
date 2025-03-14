@@ -1,0 +1,144 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f5f7fa;
+    color: #333;
+    padding: 30px;
+    line-height: 1.6;
+}
+
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 30px;
+    font-size: 2.2em;
+    font-weight: 600;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto 30px;
+    border-collapse: collapse;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #e0e4e8;
+}
+
+th {
+    background-color: #34495e;
+    color: #fff;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.9em;
+}
+
+td {
+    font-size: 0.95em;
+    color: #555;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+tr:nth-child(even) {
+    background-color: #fafafa;
+}
+
+tr:hover {
+    background-color: #f0f4f8;
+    transition: background-color 0.3s ease;
+}
+
+/* Pagination Styles */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.pagination a {
+    display: inline-block;
+    padding: 8px 14px;
+    text-decoration: none;
+    color: #34495e;
+    background-color: #fff;
+    border: 1px solid #d1d5db;
+    border-radius: 5px;
+    font-size: 0.9em;
+    transition: all 0.3s ease;
+}
+
+.pagination a:hover {
+    background-color: #3498db;
+    color: #fff;
+    border-color: #3498db;
+}
+
+.pagination a.active {
+    background-color: #34495e;
+    color: #fff;
+    border-color: #34495e;
+    cursor: default;
+}
+
+.pagination a.active:hover {
+    background-color: #34495e;
+    color: #fff;
+}
+
+/* Disabled State for Previous/Next */
+.pagination a.disabled {
+    background-color: #e5e7eb;
+    color: #9ca3af;
+    border-color: #d1d5db;
+    cursor: not-allowed;
+}
+
+.pagination a.disabled:hover {
+    background-color: #e5e7eb;
+    color: #9ca3af;
+    border-color: #d1d5db;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+    body {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    table {
+        font-size: 0.9em;
+    }
+
+    th, td {
+        padding: 10px;
+    }
+
+    .pagination a {
+        padding: 6px 10px;
+        font-size: 0.85em;
+    }
+}
